@@ -7,7 +7,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pap1hN0rGJHC1FQ5tR6c5Q2l3rEwz6Qe0LJ4qigFpkecF3iWQyzSl8g7FjXhIQF8P0rT10Ryl4x6ZWZrhLZhrg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>PatioTime Bar - PatioTime Bar</title>
   </head>
   <body>
@@ -18,14 +17,14 @@
         class="hidden md:block absolute inset-0 w-full h-full object-cover -z-10">
         <source src="/video-bg.mp4" type="video/mp4">
       </video>
-
+      
       <img src="/video-bg.jpg" alt="Mobile Background" 
         class="absolute top-0 left-0 w-full h-full object-cover -z-10 md:hidden ">
 
       <div class="absolute inset-0 bg-black/40 -z-10"></div>
 
       <!-- header -->
-      <section class="hidden md-flex justify-between items-center text-white text-sm relative z-10 px-4 lg:pl-[300px] lg:pr-[300px] py-4 pb-2 md:flex md:px-8 items-center">
+      <section class="hidden md-flex justify-between items-center text-white text-sm relative z-10 px-4 md:px-8 lg:pl-[300px] lg:pr-[300px] py-4 pb-2 md:flex items-center">
         <div class="flex items-center">
           <a href="https://www.google.com/maps/place/Barbican+Centre/@51.5205487,-0.0936463,18z/data=!4m13!1m7!3m6!1s0x48761ca98744377d:0x9e296ec2b218ce78!2sSilk+St,+London,+UK!3b1!8m2!3d51.5198778!4d-0.0916239!3m4!1s0x48761b56fb64b275:0xc756e26675d21f40!8m2!3d51.5202077!4d-0.0937864"
             class="hover:underline flex items-center gap-2">
@@ -77,6 +76,7 @@
         
         <img src="/logo.png" alt="PatioTime Bar Logo" class="w-[190px] h-[61px]">
         
+        <!-- mobile nav header -->
         <div class="flex items-center">
           <div class="md:hidden flex gap-2 text-white text-[14px]">
             <a href="#" class="text-white">EN –</a>
@@ -92,7 +92,8 @@
       <!-- welcome to patiotime bar -->
       <div class="absolute inset-0 flex flex-col items-center justify-center text-center">
         <h1 class="text-white text-[48px] md:text-[98px] leading-[1]">
-          <span class="font-cormorant italic font-light tracking-tight">Welcome to</span><br>
+          <span class="font-cormorant italic font-light tracking-tight">Welcome</span>
+          <span class="font-cormorant font-light tracking-tight">to</span><br>
           <span class="font-bold font-cormorant" style="color: #DD5903">PatioTime</span>
           <span class="font-cormorant font-light">Bar</span>
         </h1>
@@ -108,9 +109,9 @@
     </section>
 
   <!-- sticky navigation -->
-  <nav id="sticky-nav" class="hidden md:block fixed top-0 left-0 w-full bg-transparent z-50 transform -translate-y-full transition-transform duration-300">
-    <div class="flex justify-between items-center w-full py-4 md:py-5 px-6 md:px-4 lg:pl-[305px] lg:pr-[305px]">
-      <div class="flex items-center gap-4 md:gap-10 text-[14px]">
+  <nav id="sticky-nav" class="hidden lg:block fixed top-0 left-0 w-full bg-transparent z-50 transform -translate-y-full transition-transform duration-300">
+    <div class="flex justify-between items-center w-full py-5 lg:pl-[305px] lg:pr-[305px]">
+      <div class="flex items-center gap-4 text-[14px]">
         <button class="menu-toggle w-9 h-3 flex flex-col justify-between">
           <span class="w-7 h-[2px] bg-white"></span>
           <span class="w-7 h-[2px] bg-white"></span>
@@ -123,28 +124,22 @@
       </div>
       
       <img src="/logo.png" alt="PatioTime Bar Logo" class="w-[190px] h-[61px]">
-      
-      <div class="flex items-center">
-        <div class="md:hidden flex gap-2 text-white text-[14px]">
-          <a href="#" class="text-white">EN –</a>
-          <a href="#" class="text-white">IT</a>
-        </div>
         
-        <button class="hidden md:block font-jost text-[13px] border-2 border-white text-white bg-transparent w-[154px] h-[42px] hover:bg-white hover:text-black duration-300">
-          FIND A TABLE
-        </button>
+      <button class="hidden md:block font-jost text-[13px] border-2 border-white text-white bg-transparent w-[154px] h-[42px] hover:bg-white hover:text-black duration-300">
+        FIND A TABLE
+      </button>
       </div>
     </div>
   </nav>
 
   <!-- about us section -->
-  <section class="md:h-[720px] bg-[#0e0d0a] w-full relative flex flex-col md:flex-row items-center justify-between px-0 md:px-[350px] pt-[60px] md:pt-0 pb-0 text-white">
-    <div class="flex md:hidden w-full gap-2">
+  <section class="h-auto md:h-[720px] bg-[#0e0d0a] w-full relative flex flex-col md:flex-row items-center justify-between px-6 md:px-[350px] pt-[100px] md:pt-0 pb-12 md:pb-0 text-white">
+    <div class="flex md:hidden w-full gap-2 justify-center">
       <img src="/left-image.jpg" alt="Bar" class="w-[200px] h-[260px] object-cover">
       <img src="/right-image.jpg" alt="Bartender" class="w-[200px] h-[260px] object-cover">
     </div>
 
-    <img src="/left-image.jpg" alt="Bar" class="hidden md:block h-[480px]">
+    <img src="/left-image.jpg" alt="Bar" class="hidden md:block w-auto h-[480px] object-contain">
 
     <div class="flex flex-col justify-center w-full md:max-w-[600px] text-center px-8 md:px-0 py-12 md:py-0">
       <h5 class="font-jost text-[13px] font-bold tracking-wider" style="color: #DD5903">PATIO BAR'S STORY</h5>
@@ -156,35 +151,35 @@
         1960s, it will give you a cocktail experience that 
         you'll have a hard time forgetting.
       </p>
-      <a href="#" class="group relative font-jost font-bold text-[13px] text-white tracking-wider inline-block">
+      <a href="#" class="group relative font-jost font-semibold text-[13px] text-white">
         DISCOVER MORE
-        <span class="absolute left-1/2 -translate-x-1/2 -bottom-2 h-[2px] w-[120px] bg-[#DD5903] transition-opacity duration-300 group-hover:opacity-0"></span>
-        <span class="absolute left-1/2 -translate-x-1/2 -bottom-2 h-[2px] w-[120px] overflow-hidden">
+        <span class="absolute left-1/2 -translate-x-1/2 -bottom-2 h-[2px] w-[110px] bg-[#DD5903] transition-opacity duration-300 group-hover:opacity-0"></span>
+        <span class="absolute left-1/2 -translate-x-1/2 -bottom-2 h-[2px] w-[110px] overflow-hidden">
         <span class="block h-full w-0 bg-[#0e0d0a] transition-all duration-200 ease-out group-hover:w-full"></span></span>
-      </a>
       </a>
     </div>
 
-    <img src="/right-image.jpg" alt="Bartender" class="hidden md:block h-[480px] object-contain">
+    <img src="/right-image.jpg" alt="Bartender" class="hidden md:block w-auto h-[480px] object-contain">
   </section>
 
     <!-- best experience section -->
     <section class="relative h-[280px] md:h-[671px] w-full bg-cover bg-center" style="background-image: url('/section3-bg.jpg');">
       <div class="absolute inset-0 bg-gradient-to-b from-black/60 to-black/20"></div>
-      <img src="/overlay-image.png" alt="Overlay" class="relative md:absolute top-0 md:top-1/2 left-1/2 -translate-x-1/2 md:-translate-y-1/2 w-[280px] md:w-[1235px] h-auto md:h-[321px] py-16 md:py-0">
+      <div class="absolute inset-0 flex items-center justify-center md:hidden"></div>
+        <img src="/overlay-image.png" alt="Overlay" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[280px] md:w-[1235px] h-auto">
     </section>
 
     <!-- prev and next chevron -->
     <section class="relative h-[631px] bg-[#1a1a1a]">
       <div class="max-w-[1205px] mx-auto h-full flex items-center relative">
-      <button id="prev-arrow" class="absolute -left-15 z-10 w-32 h-24 flex items-center justify-start group cursor-pointer">
+      <button id="prev-arrow" class="hidden md:flex absolute left-2 md:-left-15 z-10 w-32 h-24 items-center justify-start group cursor-pointer">
         <div class="relative w-25 h-20 flex items-center">
           <span class="absolute left-0 w-25 h-[1px] bg-white origin-left transition-all duration-300 group-hover:-rotate-[40deg] group-hover:translate-y-[2px] group-hover:w-10"></span>
           <span class="absolute left-0 w-25 h-[1px] bg-white origin-left transition-all duration-300 group-hover:rotate-[40deg] group-hover:translate-y-[2px] group-hover:w-10"></span>
         </div>
       </button>
 
-      <button id="next-arrow" class="absolute -right-15 z-10 w-32 h-24 flex items-center justify-end group cursor-pointer">
+      <button id="next-arrow" class="hidden md:flex absolute right-2 md:-right-15 z-10 w-32 h-24 items-center justify-end group cursor-pointer">
         <div class="relative w-25 h-20 flex items-center justify-end">
           <span class="absolute right-0 w-25 h-[1px] bg-white origin-right transition-all duration-300 group-hover:rotate-[40deg] group-hover:translate-y-[2px] group-hover:w-10"></span>
           <span class="absolute right-0 w-25 h-[1px] bg-white origin-right transition-all duration-300 group-hover:-rotate-[40deg] group-hover:translate-y-[2px] group-hover:w-10"></span>
@@ -192,72 +187,72 @@
       </button>
 
       <!-- carousel -->
-      <div class="relative overflow-hidden">
+      <div class="relative overflow-hidden w-full flex flex-col justify-center items-center px-6 md:px-0">
         <div id="carousel-track" class="flex gap-16 transition-transform duration-300 ease-in-out items-center">
-          <div class="flex-shrink-0 w-[252px]">
+          <div class="flex-shrink-0 w-full md:w-[252px] max-w-[300px]">
             <img src="/image1.jpg" alt="Image 1" class="w-full object-cover">
           </div>
-          <div class="flex-shrink-0 w-[252px]">
+          <div class="flex-shrink-0 w-full md:w-[252px] max-w-[300px]">
             <img src="/image2.jpg" alt="Image 2" class="w-full object-cover">
           </div>
-          <div class="flex-shrink-0 w-[252px]">
+          <div class="flex-shrink-0 w-full md:w-[252px] max-w-[300px]">
             <img src="/image3.jpg" alt="Image 3" class="w-full object-cover">
           </div>
-          <div class="flex-shrink-0 w-[252px]">
+          <div class="flex-shrink-0 w-full md:w-[252px] max-w-[300px]">
             <img src="/image4.jpg" alt="Image 4" class="w-full object-cover">
           </div>
-          <div class="flex-shrink-0 w-[252px]">
+          <div class="flex-shrink-0 w-full md:w-[252px] max-w-[300px]">
             <img src="/image5.jpg" alt="Image 5" class="w-full object-cover">
           </div>
-          <div class="flex-shrink-0 w-[252px]">
+          <div class="flex-shrink-0 w-full md:w-[252px] max-w-[300px]">
             <img src="/image6.jpg" alt="Image 6" class="w-full object-cover">
           </div>
 
-          <div class="flex-shrink-0 w-[252px]">
+          <div class="flex-shrink-0 w-full md:w-[252px] max-w-[300px]">
             <img src="/image1.jpg" alt="Image 1" class="w-full object-cover">
           </div>
-          <div class="flex-shrink-0 w-[252px]">
+          <div class="flex-shrink-0 w-full md:w-[252px] max-w-[300px]">
             <img src="/image2.jpg" alt="Image 2" class="w-full object-cover">
           </div>
-          <div class="flex-shrink-0 w-[252px]">
+          <div class="flex-shrink-0 w-full md:w-[252px] max-w-[300px]">
             <img src="/image3.jpg" alt="Image 3" class="w-full object-cover">
           </div>
-          <div class="flex-shrink-0 w-[252px]">
+          <div class="flex-shrink-0 w-full md:w-[252px] max-w-[300px]">
             <img src="/image4.jpg" alt="Image 4" class="w-full object-cover">
           </div>
-          <div class="flex-shrink-0 w-[252px]">
+          <div class="flex-shrink-0 w-full md:w-[252px] max-w-[300px]">
             <img src="/image5.jpg" alt="Image 5" class="w-full object-cover">
           </div>
-          <div class="flex-shrink-0 w-[252px]">
+          <div class="flex-shrink-0 w-full md:w-[252px] max-w-[300px]">
             <img src="/image6.jpg" alt="Image 6" class="w-full object-cover">
           </div>
         </div>
 
-        <div class="flex justify-center mt-15 gap-4 pb-1">
-          <button class="dot w-1.5 h-1.5 rounded-full bg-white/50" data-slide="0"></button>
-          <button class="dot w-1.5 h-1.5 rounded-full bg-white/50" data-slide="1"></button>
-          <button class="dot w-1.5 h-1.5 rounded-full bg-white/50" data-slide="2"></button>
-          <button class="dot w-1.5 h-1.5 rounded-full bg-white/50" data-slide="3"></button>
-          <button class="dot w-1.5 h-1.5 rounded-full bg-white/50" data-slide="4"></button>
-          <button class="dot w-1.5 h-1.5 rounded-full bg-white/50" data-slide="5"></button>
+        <div class="flex justify-center mt-8 gap-4 pb-6">
+          <button class="dot w-2 h-2 rounded-full bg-white/50 transition-all duration-300" data-slide="0"></button>
+          <button class="dot w-2 h-2 rounded-full bg-white/50 transition-all duration-300" data-slide="1"></button>
+          <button class="dot w-2 h-2 rounded-full bg-white/50 transition-all duration-300" data-slide="2"></button>
+          <button class="dot w-2 h-2 rounded-full bg-white/50 transition-all duration-300" data-slide="3"></button>
+          <button class="dot w-2 h-2 rounded-full bg-white/50 transition-all duration-300" data-slide="4"></button>
+          <button class="dot w-2 h-2 rounded-full bg-white/50 transition-all duration-300" data-slide="5"></button>
         </div>
       </div>
     </div>
     </section>
 
     <!-- ala carte section -->
-    <section class="relative h-[505px] w-full bg-cover bg-center" style="background-image: url('/section4-bg.jpg');">
+    <section class="relative h-[280px] md:h-[505px] w-full bg-cover bg-center" style="background-image: url('/section4-bg.jpg');">
       <div class="absolute inset-0 bg-gradient-to-b from-black/60 to-black/20 flex flex-col items-center justify-center text-center">
         <h6 class="font-jost font-bold text-[13px] text-white tracking-wider">DISCOVER THE FULL MENU</h6>
-        <h1 class="font-cormorant-garamond text-[98px] text-white mt-1">À la Carte</h1>
+        <h1 class="font-cormorant-garamond text-[40px] md:text-[98px] text-white mt-1">À la Carte</h1>
       </div>
     </section>
 
     <!-- drinks and snacks section -->
     <section class="relative py-16 bg-[#1a1a1a]">
-      <div class="max-w-[1200px] pt-20"></div>
+      <div class="max-w-[1200px] pt-8 md:pt-20"></div>
 
-        <div class="flex justify-center">
+        <div class="flex flex-col md:flex-row justify-center px-6 md:px-0">
           <div class="relative group cursor-pointer overflow-hidden">
             <img src="/img1.jpg" alt="Image 1" class="w-[400px] h-[600px] object-cover transition-transform duration-500 group-hover:scale-110">
             <div class="absolute inset-0 bg-gradient-to-b from-black/60 to-black/20 transition-opacity duration-500 group-hover:opacity-80"></div>
@@ -266,10 +261,10 @@
               Drinks & Snacks
               </h3>
 
-              <a href="#" class="group relative font-jost font-semi-bold text-[13px] text-white tracking-wider">
+              <a href="#" class="group relative font-jost font-semibold text-[13px] text-white">
                 DISCOVER MORE
-                <span class="absolute left-1/2 -translate-x-1/2 -bottom-2 h-[2px] w-[110px] bg-[#DD5903] transition-opacity duration-300 group-hover:opacity-0"></span>
-                <span class="absolute left-1/2 -translate-x-1/2 -bottom-2 h-[2px] w-[110px] overflow-hidden">
+                <span class="absolute left-1/2 -translate-x-1/2 -bottom-2 h-[2px] w-[105px] bg-[#DD5903] transition-opacity duration-300 group-hover:opacity-0"></span>
+                <span class="absolute left-1/2 -translate-x-1/2 -bottom-2 h-[2px] w-[105px] overflow-hidden">
                 <span class="block h-full w-0 bg-transparent transition-all duration-200 ease-out group-hover:w-full"></span></span>
               </a>
             </div>
@@ -283,10 +278,10 @@
               Cocktails & Spirits
               </h3>
 
-              <a href="#" class="group relative font-jost font-semi-bold text-[13px] text-white tracking-wider">
+              <a href="#" class="group relative font-jost font-semibold text-[13px] text-white">
                 DISCOVER MORE
-                <span class="absolute left-1/2 -translate-x-1/2 -bottom-2 h-[2px] w-[110px] bg-[#DD5903] transition-opacity duration-300 group-hover:opacity-0"></span>
-                <span class="absolute left-1/2 -translate-x-1/2 -bottom-2 h-[2px] w-[110px] overflow-hidden">
+                <span class="absolute left-1/2 -translate-x-1/2 -bottom-2 h-[2px] w-[105px] bg-[#DD5903] transition-opacity duration-300 group-hover:opacity-0"></span>
+                <span class="absolute left-1/2 -translate-x-1/2 -bottom-2 h-[2px] w-[105px] overflow-hidden">
                 <span class="block h-full w-0 bg-transparent transition-all duration-200 ease-out group-hover:w-full"></span></span>
               </a>
             </div>
@@ -300,10 +295,10 @@
               Wine List
               </h3>
 
-              <a href="#" class="group relative font-jost font-semi-bold text-[13px] text-white tracking-wider">
+              <a href="#" class="group relative font-jost font-semibold text-[13px] text-white">
                 DISCOVER MORE
-                <span class="absolute left-1/2 -translate-x-1/2 -bottom-2 h-[2px] w-[110px] bg-[#DD5903] transition-opacity duration-300 group-hover:opacity-0"></span>
-                <span class="absolute left-1/2 -translate-x-1/2 -bottom-2 h-[2px] w-[110px] overflow-hidden">
+                <span class="absolute left-1/2 -translate-x-1/2 -bottom-2 h-[2px] w-[105px] bg-[#DD5903] transition-opacity duration-300 group-hover:opacity-0"></span>
+                <span class="absolute left-1/2 -translate-x-1/2 -bottom-2 h-[2px] w-[105px] overflow-hidden">
                 <span class="block h-full w-0 bg-transparent transition-all duration-200 ease-out group-hover:w-full"></span></span>
               </a>
             </div>
@@ -313,10 +308,10 @@
     </section>
 
     <!-- events & shows section -->
-    <section class="relative py-10 bg-[#1a1a1a] h-[928px]">
-        <h5 class="font-jost font-bold text-[13px] text-center tracking-wider" style="color: #DD5903">MORE AT PATIO TIME BAR</h5>
-        <h1 class="font-cormorant-garamond text-[98px] text-center text-white">Events & Shows</h1>
-        <p class="font-jost-regular text-[18px] text-white text-center">
+    <section class="relative py-10 bg-[#1a1a1a] h-auto md:h-[928px]">
+        <h5 class="font-jost font-bold text-[13px] text-center" style="color: #DD5903">MORE AT PATIO TIME BAR</h5>
+        <h1 class="font-cormorant-garamond text-[40px] md:text-[98px] text-center text-white">Events & Shows</h1>
+        <p class="font-jost-regular text-[16px] md:text-[18px] text-white text-center px-6 md:px-0">
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis<br>
           natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec. 
         </p>
@@ -324,23 +319,23 @@
 
     <section class="relative h-[631px] bg-[#1a1a1a]">
       <div class="max-w-[1205px] mx-auto h-full flex items-center relative">
-      <button id="events-prev-arrow" class="absolute -left-15 z-10 w-32 h-24 flex items-center justify-start group cursor-pointer">
+      <button id="events-prev-arrow" class="hidden md:flex absolute -left-15 z-10 w-32 h-24 items-center justify-start group cursor-pointer">
         <div class="relative w-25 h-20 flex items-center">
           <span class="absolute left-0 w-25 h-[1px] bg-white origin-left transition-all duration-300 group-hover:-rotate-[40deg] group-hover:translate-y-[2px] group-hover:w-10"></span>
           <span class="absolute left-0 w-25 h-[1px] bg-white origin-left transition-all duration-300 group-hover:rotate-[40deg] group-hover:translate-y-[2px] group-hover:w-10"></span>
         </div>
       </button>
 
-      <button id="events-next-arrow" class="absolute -right-15 z-10 w-32 h-24 flex items-center justify-end group cursor-pointer">
+      <button id="events-next-arrow" class="hidden md:flex absolute -right-15 z-10 w-32 h-24 items-center justify-end group cursor-pointer">
         <div class="relative w-25 h-20 flex items-center justify-end">
           <span class="absolute right-0 w-25 h-[1px] bg-white origin-right transition-all duration-300 group-hover:rotate-[40deg] group-hover:translate-y-[2px] group-hover:w-10"></span>
           <span class="absolute right-0 w-25 h-[1px] bg-white origin-right transition-all duration-300 group-hover:-rotate-[40deg] group-hover:translate-y-[2px] group-hover:w-10"></span>
         </div>
       </button>
 
-      <div class="w-full flex flex-col items-center">
-      <div class="relative h-[515px] w-full flex items-center justify-center overflow-hidden pb-8">
-        <div id="events-track" class="relative w-[768px] h-[480px] transition-opacity duration-500">
+      <div class="w-full flex flex-col items-center px-6 md:px-0">
+      <div class="relative h-[300px] md:h-[515px] w-full flex items-center justify-center overflow-hidden pb-8">
+        <div id="events-track" class="relative w-full md:w-[768px] h-[300px] md:h-[480px] max-w-[300px] md:max-w-none transition-opacity duration-500">
           <img src="/bg1.jpg" alt="Bg 1" class="w-full h-full object-cover absolute inset-0 opacity-100">
           <img src="/bg2.jpg" alt="Bg 2" class="w-full h-full object-cover absolute inset-0 opacity-0">
           <img src="/bg3.jpg" alt="Bg 3" class="w-full h-full object-cover absolute inset-0 opacity-0">
@@ -348,9 +343,9 @@
       </div>
 
       <div class="flex justify-center mt-2 gap-4">
-        <button class="dot w-1.5 h-1.5 rounded-full bg-white hover:bg-white transition-colors duration-300" data-slide="0"></button>
-        <button class="dot w-1.5 h-1.5 rounded-full bg-white hover:bg-white transition-colors duration-300" data-slide="1"></button>
-        <button class="dot w-1.5 h-1.5 rounded-full bg-white hover:bg-white transition-colors duration-300" data-slide="2"></button>
+        <button class="dot w-2 h-2 rounded-full bg-white/50 transition-all duration-300" data-slide="0"></button>
+        <button class="dot w-2 h-2 rounded-full bg-white/50 transition-all duration-300" data-slide="1"></button>
+        <button class="dot w-2 h-2 rounded-full bg-white/50 transition-all duration-300" data-slide="2"></button>
       </div>
     </section>
 
@@ -363,7 +358,7 @@
         <p class="font-jost text-[18px] mb-6">From 18:00 to 02:00</p>
         <p class="font-jost text-[18px] mb-1">Via Santa Caterina D'Alessandria, 22/R,</p>
         <p class="font-jost text-[18px] mb-6">50123 Firenze FI, Italy</p>
-        <p class="font-jost text-[18px] mb-6">+39 055 1234567</p>
+        <p class="font-jost text-[18px] mb-6 hover:text-[#DD5903] duration-300">+39 055 1234567</p>
         
         <button class="font-jost font-semibold text-[16px] bg-[#DD5903] text-white px-6 py-3 mb-10 tracking-wider transition-all duration-300 ease-out transform hover:-translate-y-1">
           VIEW IN GOOGLE MAPS

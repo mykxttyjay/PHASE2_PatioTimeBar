@@ -35,7 +35,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const track = document.getElementById('carousel-track');
   const prevBtn = document.getElementById('prev-arrow');
   const nextBtn = document.getElementById('next-arrow');
-  const dots = document.querySelectorAll('.dot');
+  const carouselSection = track.closest('section');
+  const dots = carouselSection ? carouselSection.querySelectorAll('.dot') : [];
   
   let currentIndex = 0;
   const totalSlides = 6;
@@ -169,6 +170,12 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentEventSlide = 0;
   const totalEventSlides = 3;
   let eventAutoPlayInterval;
+
+  // Initialize first dot as active
+  if (eventsDots.length > 0) {
+    eventsDots[0].classList.add('bg-white');
+    eventsDots[0].classList.remove('bg-white/50');
+  }
 
   function showEventSlide(index) {
     currentEventSlide = index % totalEventSlides;
