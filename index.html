@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pap1hN0rGJHC1FQ5tR6c5Q2l3rEwz6Qe0LJ4qigFpkecF3iWQyzSl8g7FjXhIQF8P0rT10Ryl4x6ZWZrhLZhrg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>PatioTime Bar - PatioTime Bar</title>
+  </head>
+  <body>
+   
+    <!-- background video -->
+    <section class="relative w-full min-h-screen overflow-hidden">
+      <video autoplay muted loop 
+        class="hidden md:block absolute inset-0 w-full h-full object-cover -z-10">
+        <source src="/video-bg.mp4" type="video/mp4">
+      </video>
+
+      <img src="/video-bg.jpg" alt="Mobile Background" 
+        class="absolute top-0 left-0 w-full h-full object-cover -z-10 md:hidden ">
+
+      <div class="absolute inset-0 bg-black/40 -z-10"></div>
+
+      <!-- header -->
+      <section class="hidden md-flex justify-between items-center text-white text-sm relative z-10 px-4 lg:pl-[300px] lg:pr-[300px] py-4 pb-2 md:flex md:px-8 items-center">
+        <div class="flex items-center">
+          <a href="https://www.google.com/maps/place/Barbican+Centre/@51.5205487,-0.0936463,18z/data=!4m13!1m7!3m6!1s0x48761ca98744377d:0x9e296ec2b218ce78!2sSilk+St,+London,+UK!3b1!8m2!3d51.5198778!4d-0.0916239!3m4!1s0x48761b56fb64b275:0xc756e26675d21f40!8m2!3d51.5202077!4d-0.0937864"
+            class="hover:underline flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5">
+              <path fill-rule="evenodd" d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" clip-rule="evenodd" />
+            </svg>
+            Silk St, Barbican, London EC2Y 8DS, UK
+          </a>
+        </div>
+
+        <div class="flex items-center gap-4 md:gap-8">
+          <div class="flex items-center">
+            <a href="tel:=+39-055-123456" class="hover:underline flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5">
+                <path fill-rule="evenodd" d="M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 0 0 6.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z" clip-rule="evenodd" />
+              </svg>
+              +39-055-123456
+            </a>
+          </div>
+
+          <div class="flex items-center">
+            <a href="mailto:booking@patiotime.com" class="hover:underline flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5">
+                <path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z" />
+                <path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" />
+              </svg>
+              booking@patiotime.com
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <div class="hidden md:block w-full h-px bg-white/20 my-3 relative z-10"></div>
+
+      <!-- navigation header -->
+      <div id="main-nav" class="flex justify-between items-center w-full relative z-10 py-4 md:py-2 px-6 md:px-4 lg:pl-[305px] lg:pr-[305px] transition-all duration-300">
+        
+        <div class="flex items-center gap-4 md:gap-10 text-[14px]">
+          <button class="menu-toggle w-9 h-3 flex flex-col justify-between">
+            <span class="w-7 h-[2px] bg-white"></span>
+            <span class="w-7 h-[2px] bg-white"></span>
+          </button>
+
+          <div class="hidden md:flex gap-2 text-white">
+            <a href="#" class="text-white">EN –</a>
+            <a href="#" class="text-white">IT</a>
+          </div>
+        </div>
+        
+        <img src="/logo.png" alt="PatioTime Bar Logo" class="w-[190px] h-[61px]">
+        
+        <div class="flex items-center">
+          <div class="md:hidden flex gap-2 text-white text-[14px]">
+            <a href="#" class="text-white">EN –</a>
+            <a href="#" class="text-white">IT</a>
+          </div>
+          
+          <button class="hidden md:block font-jost font-semibold text-[13px] border-2 border-white text-white bg-transparent w-[154px] h-[42px] hover:bg-white hover:text-black duration-300">
+            FIND A TABLE
+          </button>
+        </div>
+      </div>
+
+      <!-- welcome to patiotime bar -->
+      <div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+        <h1 class="text-white text-[48px] md:text-[98px] leading-[1]">
+          <span class="font-cormorant italic font-light tracking-tight">Welcome to</span><br>
+          <span class="font-bold font-cormorant" style="color: #DD5903">PatioTime</span>
+          <span class="font-cormorant font-light">Bar</span>
+        </h1>
+
+        <h5 class="font-jost font-semibold text-white text-[24px] mt-4">DRINK . MUSIC . PLAY</h5>
+        <h6 class="font-jost-regular absolute bottom-13 text-white text-[18px] flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+          </svg>
+          Opening Hours: 18:00 - 02:00
+        </h6>
+      </div>
+    </section>
+
+  <!-- sticky navigation -->
+  <nav id="sticky-nav" class="hidden md:block fixed top-0 left-0 w-full bg-transparent z-50 transform -translate-y-full transition-transform duration-300">
+    <div class="flex justify-between items-center w-full py-4 md:py-5 px-6 md:px-4 lg:pl-[305px] lg:pr-[305px]">
+      <div class="flex items-center gap-4 md:gap-10 text-[14px]">
+        <button class="menu-toggle w-9 h-3 flex flex-col justify-between">
+          <span class="w-7 h-[2px] bg-white"></span>
+          <span class="w-7 h-[2px] bg-white"></span>
+        </button>
+
+        <div class="hidden md:flex gap-2 text-white">
+          <a href="#" class="text-white">EN –</a>
+          <a href="#" class="text-white">IT</a>
+        </div>
+      </div>
+      
+      <img src="/logo.png" alt="PatioTime Bar Logo" class="w-[190px] h-[61px]">
+      
+      <div class="flex items-center">
+        <div class="md:hidden flex gap-2 text-white text-[14px]">
+          <a href="#" class="text-white">EN –</a>
+          <a href="#" class="text-white">IT</a>
+        </div>
+        
+        <button class="hidden md:block font-jost text-[13px] border-2 border-white text-white bg-transparent w-[154px] h-[42px] hover:bg-white hover:text-black duration-300">
+          FIND A TABLE
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- about us section -->
+  <section class="md:h-[720px] bg-[#0e0d0a] w-full relative flex flex-col md:flex-row items-center justify-between px-0 md:px-[350px] pt-[60px] md:pt-0 pb-0 text-white">
+    <div class="flex md:hidden w-full gap-2">
+      <img src="/left-image.jpg" alt="Bar" class="w-[200px] h-[260px] object-cover">
+      <img src="/right-image.jpg" alt="Bartender" class="w-[200px] h-[260px] object-cover">
+    </div>
+
+    <img src="/left-image.jpg" alt="Bar" class="hidden md:block h-[480px]">
+
+    <div class="flex flex-col justify-center w-full md:max-w-[600px] text-center px-8 md:px-0 py-12 md:py-0">
+      <h5 class="font-jost text-[13px] font-bold tracking-wider" style="color: #DD5903">PATIO BAR'S STORY</h5>
+      <h1 class="font-cormorant-garamond text-[40px] md:text-[74px] mb-2">About Us</h1>
+      <p class="font-jost-regular text-[18px] md:text-[18px] px-4 md:px-[65px] leading-[32px] md:leading-[32px] mb-8">
+        A relaxing and pleasant atmosphere, good jazz, 
+        dinner and cocktails. The PatioTime Bar opens in the 
+        centre of Florence. The only bar inspired by the 
+        1960s, it will give you a cocktail experience that 
+        you'll have a hard time forgetting.
+      </p>
+      <a href="#" class="group relative font-jost font-bold text-[13px] text-white tracking-wider inline-block">
+        DISCOVER MORE
+        <span class="absolute left-1/2 -translate-x-1/2 -bottom-2 h-[2px] w-[120px] bg-[#DD5903] transition-opacity duration-300 group-hover:opacity-0"></span>
+        <span class="absolute left-1/2 -translate-x-1/2 -bottom-2 h-[2px] w-[120px] overflow-hidden">
+        <span class="block h-full w-0 bg-[#0e0d0a] transition-all duration-200 ease-out group-hover:w-full"></span></span>
+      </a>
+      </a>
+    </div>
+
+    <img src="/right-image.jpg" alt="Bartender" class="hidden md:block h-[480px] object-contain">
+  </section>
+
+    <!-- best experience section -->
+    <section class="relative h-[280px] md:h-[671px] w-full bg-cover bg-center" style="background-image: url('/section3-bg.jpg');">
+      <div class="absolute inset-0 bg-gradient-to-b from-black/60 to-black/20"></div>
+      <img src="/overlay-image.png" alt="Overlay" class="relative md:absolute top-0 md:top-1/2 left-1/2 -translate-x-1/2 md:-translate-y-1/2 w-[280px] md:w-[1235px] h-auto md:h-[321px] py-16 md:py-0">
+    </section>
+
+    <!-- prev and next chevron -->
+    <section class="relative h-[631px] bg-[#1a1a1a]">
+      <div class="max-w-[1205px] mx-auto h-full flex items-center relative">
+      <button id="prev-arrow" class="absolute -left-15 z-10 w-32 h-24 flex items-center justify-start group cursor-pointer">
+        <div class="relative w-25 h-20 flex items-center">
+          <span class="absolute left-0 w-25 h-[1px] bg-white origin-left transition-all duration-300 group-hover:-rotate-[40deg] group-hover:translate-y-[2px] group-hover:w-10"></span>
+          <span class="absolute left-0 w-25 h-[1px] bg-white origin-left transition-all duration-300 group-hover:rotate-[40deg] group-hover:translate-y-[2px] group-hover:w-10"></span>
+        </div>
+      </button>
+
+      <button id="next-arrow" class="absolute -right-15 z-10 w-32 h-24 flex items-center justify-end group cursor-pointer">
+        <div class="relative w-25 h-20 flex items-center justify-end">
+          <span class="absolute right-0 w-25 h-[1px] bg-white origin-right transition-all duration-300 group-hover:rotate-[40deg] group-hover:translate-y-[2px] group-hover:w-10"></span>
+          <span class="absolute right-0 w-25 h-[1px] bg-white origin-right transition-all duration-300 group-hover:-rotate-[40deg] group-hover:translate-y-[2px] group-hover:w-10"></span>
+        </div>
+      </button>
+
+      <!-- carousel -->
+      <div class="relative overflow-hidden">
+        <div id="carousel-track" class="flex gap-16 transition-transform duration-300 ease-in-out items-center">
+          <div class="flex-shrink-0 w-[252px]">
+            <img src="/image1.jpg" alt="Image 1" class="w-full object-cover">
+          </div>
+          <div class="flex-shrink-0 w-[252px]">
+            <img src="/image2.jpg" alt="Image 2" class="w-full object-cover">
+          </div>
+          <div class="flex-shrink-0 w-[252px]">
+            <img src="/image3.jpg" alt="Image 3" class="w-full object-cover">
+          </div>
+          <div class="flex-shrink-0 w-[252px]">
+            <img src="/image4.jpg" alt="Image 4" class="w-full object-cover">
+          </div>
+          <div class="flex-shrink-0 w-[252px]">
+            <img src="/image5.jpg" alt="Image 5" class="w-full object-cover">
+          </div>
+          <div class="flex-shrink-0 w-[252px]">
+            <img src="/image6.jpg" alt="Image 6" class="w-full object-cover">
+          </div>
+
+          <div class="flex-shrink-0 w-[252px]">
+            <img src="/image1.jpg" alt="Image 1" class="w-full object-cover">
+          </div>
+          <div class="flex-shrink-0 w-[252px]">
+            <img src="/image2.jpg" alt="Image 2" class="w-full object-cover">
+          </div>
+          <div class="flex-shrink-0 w-[252px]">
+            <img src="/image3.jpg" alt="Image 3" class="w-full object-cover">
+          </div>
+          <div class="flex-shrink-0 w-[252px]">
+            <img src="/image4.jpg" alt="Image 4" class="w-full object-cover">
+          </div>
+          <div class="flex-shrink-0 w-[252px]">
+            <img src="/image5.jpg" alt="Image 5" class="w-full object-cover">
+          </div>
+          <div class="flex-shrink-0 w-[252px]">
+            <img src="/image6.jpg" alt="Image 6" class="w-full object-cover">
+          </div>
+        </div>
+
+        <div class="flex justify-center mt-15 gap-4 pb-1">
+          <button class="dot w-1.5 h-1.5 rounded-full bg-white/50" data-slide="0"></button>
+          <button class="dot w-1.5 h-1.5 rounded-full bg-white/50" data-slide="1"></button>
+          <button class="dot w-1.5 h-1.5 rounded-full bg-white/50" data-slide="2"></button>
+          <button class="dot w-1.5 h-1.5 rounded-full bg-white/50" data-slide="3"></button>
+          <button class="dot w-1.5 h-1.5 rounded-full bg-white/50" data-slide="4"></button>
+          <button class="dot w-1.5 h-1.5 rounded-full bg-white/50" data-slide="5"></button>
+        </div>
+      </div>
+    </div>
+    </section>
+
+    <!-- ala carte section -->
+    <section class="relative h-[505px] w-full bg-cover bg-center" style="background-image: url('/section4-bg.jpg');">
+      <div class="absolute inset-0 bg-gradient-to-b from-black/60 to-black/20 flex flex-col items-center justify-center text-center">
+        <h6 class="font-jost font-bold text-[13px] text-white tracking-wider">DISCOVER THE FULL MENU</h6>
+        <h1 class="font-cormorant-garamond text-[98px] text-white mt-1">À la Carte</h1>
+      </div>
+    </section>
+
+    <!-- drinks and snacks section -->
+    <section class="relative py-16 bg-[#1a1a1a]">
+      <div class="max-w-[1200px] pt-20"></div>
+
+        <div class="flex justify-center">
+          <div class="relative group cursor-pointer overflow-hidden">
+            <img src="/img1.jpg" alt="Image 1" class="w-[400px] h-[600px] object-cover transition-transform duration-500 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/60 to-black/20 transition-opacity duration-500 group-hover:opacity-80"></div>
+            <div class="absolute bottom-6 left-1/2 -translate-x-1/2 text-center text-white pb-4">
+              <h3 class="font-cormorant-garamond text-[36px] whitespace-nowrap">
+              Drinks & Snacks
+              </h3>
+
+              <a href="#" class="group relative font-jost font-semi-bold text-[13px] text-white tracking-wider">
+                DISCOVER MORE
+                <span class="absolute left-1/2 -translate-x-1/2 -bottom-2 h-[2px] w-[110px] bg-[#DD5903] transition-opacity duration-300 group-hover:opacity-0"></span>
+                <span class="absolute left-1/2 -translate-x-1/2 -bottom-2 h-[2px] w-[110px] overflow-hidden">
+                <span class="block h-full w-0 bg-transparent transition-all duration-200 ease-out group-hover:w-full"></span></span>
+              </a>
+            </div>
+          </div>
+
+          <div class="relative group cursor-pointer overflow-hidden">
+            <img src="/img2.jpg" alt="Image 1" class="w-[400px] h-[600px] object-cover transition-transform duration-500 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/60 to-black/20 transition-opacity duration-500 group-hover:opacity-80"></div>
+            <div class="absolute bottom-6 left-1/2 -translate-x-1/2 text-center text-white pb-4">
+              <h3 class="font-cormorant-garamond text-[36px] whitespace-nowrap">
+              Cocktails & Spirits
+              </h3>
+
+              <a href="#" class="group relative font-jost font-semi-bold text-[13px] text-white tracking-wider">
+                DISCOVER MORE
+                <span class="absolute left-1/2 -translate-x-1/2 -bottom-2 h-[2px] w-[110px] bg-[#DD5903] transition-opacity duration-300 group-hover:opacity-0"></span>
+                <span class="absolute left-1/2 -translate-x-1/2 -bottom-2 h-[2px] w-[110px] overflow-hidden">
+                <span class="block h-full w-0 bg-transparent transition-all duration-200 ease-out group-hover:w-full"></span></span>
+              </a>
+            </div>
+          </div>
+
+          <div class="relative group cursor-pointer overflow-hidden">
+            <img src="/img3.jpg" alt="Image 1" class="w-[400px] h-[600px] object-cover transition-transform duration-500 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/60 to-black/20 transition-opacity duration-500 group-hover:opacity-80"></div>
+            <div class="absolute bottom-6 left-1/2 -translate-x-1/2 text-center text-white pb-4">
+              <h3 class="font-cormorant-garamond text-[36px]">
+              Wine List
+              </h3>
+
+              <a href="#" class="group relative font-jost font-semi-bold text-[13px] text-white tracking-wider">
+                DISCOVER MORE
+                <span class="absolute left-1/2 -translate-x-1/2 -bottom-2 h-[2px] w-[110px] bg-[#DD5903] transition-opacity duration-300 group-hover:opacity-0"></span>
+                <span class="absolute left-1/2 -translate-x-1/2 -bottom-2 h-[2px] w-[110px] overflow-hidden">
+                <span class="block h-full w-0 bg-transparent transition-all duration-200 ease-out group-hover:w-full"></span></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- events & shows section -->
+    <section class="relative py-10 bg-[#1a1a1a] h-[928px]">
+        <h5 class="font-jost font-bold text-[13px] text-center tracking-wider" style="color: #DD5903">MORE AT PATIO TIME BAR</h5>
+        <h1 class="font-cormorant-garamond text-[98px] text-center text-white">Events & Shows</h1>
+        <p class="font-jost-regular text-[18px] text-white text-center">
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis<br>
+          natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec. 
+        </p>
+      </div>
+
+    <section class="relative h-[631px] bg-[#1a1a1a]">
+      <div class="max-w-[1205px] mx-auto h-full flex items-center relative">
+      <button id="events-prev-arrow" class="absolute -left-15 z-10 w-32 h-24 flex items-center justify-start group cursor-pointer">
+        <div class="relative w-25 h-20 flex items-center">
+          <span class="absolute left-0 w-25 h-[1px] bg-white origin-left transition-all duration-300 group-hover:-rotate-[40deg] group-hover:translate-y-[2px] group-hover:w-10"></span>
+          <span class="absolute left-0 w-25 h-[1px] bg-white origin-left transition-all duration-300 group-hover:rotate-[40deg] group-hover:translate-y-[2px] group-hover:w-10"></span>
+        </div>
+      </button>
+
+      <button id="events-next-arrow" class="absolute -right-15 z-10 w-32 h-24 flex items-center justify-end group cursor-pointer">
+        <div class="relative w-25 h-20 flex items-center justify-end">
+          <span class="absolute right-0 w-25 h-[1px] bg-white origin-right transition-all duration-300 group-hover:rotate-[40deg] group-hover:translate-y-[2px] group-hover:w-10"></span>
+          <span class="absolute right-0 w-25 h-[1px] bg-white origin-right transition-all duration-300 group-hover:-rotate-[40deg] group-hover:translate-y-[2px] group-hover:w-10"></span>
+        </div>
+      </button>
+
+      <div class="w-full flex flex-col items-center">
+      <div class="relative h-[515px] w-full flex items-center justify-center overflow-hidden pb-8">
+        <div id="events-track" class="relative w-[768px] h-[480px] transition-opacity duration-500">
+          <img src="/bg1.jpg" alt="Bg 1" class="w-full h-full object-cover absolute inset-0 opacity-100">
+          <img src="/bg2.jpg" alt="Bg 2" class="w-full h-full object-cover absolute inset-0 opacity-0">
+          <img src="/bg3.jpg" alt="Bg 3" class="w-full h-full object-cover absolute inset-0 opacity-0">
+        </div>
+      </div>
+
+      <div class="flex justify-center mt-2 gap-4">
+        <button class="dot w-1.5 h-1.5 rounded-full bg-white hover:bg-white transition-colors duration-300" data-slide="0"></button>
+        <button class="dot w-1.5 h-1.5 rounded-full bg-white hover:bg-white transition-colors duration-300" data-slide="1"></button>
+        <button class="dot w-1.5 h-1.5 rounded-full bg-white hover:bg-white transition-colors duration-300" data-slide="2"></button>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="relative h-[723px] w-full bg-cover bg-center" style="background-image: url('/footer-bg.jpg');">
+      <div class="absolute inset-0 bg-black/75"></div>
+      <div class="relative z-10 h-full flex flex-col items-center justify-center text-center text-white">
+        <h5 class="font-jost font-semibold text-[24px] tracking-wider mb-4">PATIO.TIME BAR</h5>
+        <h1 class="font-cormorant text-[64px] font-semibold leading-tight mb-2">Waiting For You Every Night</h1>
+        <p class="font-jost text-[18px] mb-6">From 18:00 to 02:00</p>
+        <p class="font-jost text-[18px] mb-1">Via Santa Caterina D'Alessandria, 22/R,</p>
+        <p class="font-jost text-[18px] mb-6">50123 Firenze FI, Italy</p>
+        <p class="font-jost text-[18px] mb-6">+39 055 1234567</p>
+        
+        <button class="font-jost font-semibold text-[16px] bg-[#DD5903] text-white px-6 py-3 mb-10 tracking-wider transition-all duration-300 ease-out transform hover:-translate-y-1">
+          VIEW IN GOOGLE MAPS
+        </button>
+
+        <div class="flex gap-5 mb-6">
+          <a href="#" class="text-white hover:text-[#DD5903] transition-colors duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
+            </svg>
+          </a>
+          <a href="#" class="text-white hover:text-[#DD5903] transition-colors duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+            </svg>
+          </a>
+          <a href="#" class="text-white hover:text-[#DD5903] transition-colors duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+          </a>
+          <a href="#" class="text-white hover:text-[#DD5903] transition-colors duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 0c-6.627 0-12 5.372-12 12 0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146 1.124.347 2.317.535 3.554.535 6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/>
+            </svg>
+          </a>
+          <a href="#" class="text-white hover:text-[#DD5903] transition-colors duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+            </svg>
+          </a>
+        </div>
+
+        <p class="font-jost text-[14px] text-white">© PatioTime Theme 2022</p>
+      </div>
+    </footer>
+
+  <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
